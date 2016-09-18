@@ -1,11 +1,11 @@
+#!/usr/bin/env
 
-
-#return Fibbonaci numbers below max
+'''return sum of Fibbonaci numbers below max'''
 max=4000000
 
 fib=list()
-fib.append(1)
-fib.append(2)
+fib.append(1) #first Fibbonaci number
+fib.append(2) #second Fibbonaci number
 n=2
 stop=False
 while(stop==False):
@@ -19,4 +19,4 @@ for i in range(0,len(fib)):
 	if(fib[i]%2!=0):
 		fib[i]=0
 
-sum(fib)
+print 'Sum of all Fibbonaci numbers below max=%d is %d' %(max,sum(fib))
