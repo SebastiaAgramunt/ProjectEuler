@@ -1,5 +1,5 @@
 
-'''Calculate '''
+'''Calculate the nth prime number'''
 import time
 import numpy
 
