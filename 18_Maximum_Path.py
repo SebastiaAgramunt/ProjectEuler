@@ -31,7 +31,6 @@ Find the maximum total from top to bottom of the triangle below:
 
 #I'm going to use a backpropagation algorithm
 import math
-import numpy as np
 
 steps = []
 #steps.append(np.array([4,62,98,27,23,9,70,98,73,93,38,53,60,4,23]))
@@ -50,13 +49,14 @@ steps.append([17,47,82])
 steps.append([95,64])
 steps.append([75])
 
+#let the previous step be the second row
 prev = [4,62,98,27,23,9,70,98,73,93,38,53,60,4,23]
 
 for i,step in enumerate(steps):
-	#we add 
 	aux = []
 	for j,step_elem in enumerate(step):
 
+		#find maximum number we can sum
 		candidate1 = prev[j] + step_elem
 		candidate2 = prev[j+1] + step_elem
 
@@ -64,9 +64,10 @@ for i,step in enumerate(steps):
 			aux.append(candidate1)
 		else:
 			aux.append(candidate2)
+		#print len(aux)
+	prev = aux
 
-	final = aux
-	print "iteration %d  len prev = %d" %(i,len(final))
+print "final %d" %(aux[0])
 
 
 
