@@ -1,20 +1,5 @@
 import numpy as np
 
-'''
-def decompose(digit):
-
-    divisor = 10
-    quocient = digit//divisor
-    rest = digit%divisor
-    multiples = list()
-    while(rest != 0):
-        multiples.append(rest)
-        digit = quocient
-        quocient = digit//divisor
-        rest = digit%divisor
-    return multiples
-'''
-
 def decompose(digit):
     digit = str(digit)
     digit = [a for a in digit]
